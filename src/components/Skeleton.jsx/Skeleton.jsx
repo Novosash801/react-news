@@ -1,15 +1,19 @@
-import styles from './styles.module.scss';
+import style from './style.module.scss';
 
-const Skeleton = ({count = 1, type = 'banner'}) => {
+const Skeleton = ({ count = 1, type = 'banner' }) => {
     return (
         <>
             {count > 1 ? (
-                <ul>
-                    {[Array(count)].map((_, index) => (
-                        <li key={index} className={type === 'banner' ? styles.banner : styles.item}></li>
+                <ul className={style.list}>
+                    {[...Array(count)].map((_, index) => (
+                        <li
+                            key={index}
+                            className={type === 'banner' ? style.banner : style.item}></li>
                     ))}
                 </ul>
-            ) : <li className={type === 'banner' ? styles.banner : styles.item} />} 
+            ) : (
+                <li className={type === 'banner' ? style.banner : style.item}></li>
+            )}
         </>
     );
 };
