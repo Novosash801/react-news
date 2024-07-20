@@ -6,12 +6,12 @@
     background-color: white;
     border-bottom: 1px solid #f2f4f5;
     gap: 12px;
-}
+    
+    .title {
+        font-display: 28px;
+    }
 
-.title {
-    font-display: 28px;
-}
-
-.date {
-    font-size: 16px;
+    .date {
+        font-size: 16px;
+    }
 }
